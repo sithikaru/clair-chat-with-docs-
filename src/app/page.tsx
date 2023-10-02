@@ -1,5 +1,10 @@
 import MaxWidthWrapper from "@/components/maxWidthWrapper"
+import Link from "next/link"
 import { Children } from "react"
+import { ArrowRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
+
+
 export default function Home() {
   return (
     <MaxWidthWrapper className="mb-12 mt-12 sm:mt-40 flex flex-col items-center justify-center text-center">
@@ -9,8 +14,16 @@ export default function Home() {
         </p>
       </div>
       <h1 className="max-w-4xl text-5xl md:text-6xl font-bold lg:text-7xl">
-    Chat with your <span className="text-blue-600">Documents</span>
+    Chat with your <span className="text-blue-600">Documents</span> in seconds.
       </h1>
+      <p className="mt 5 max-w-prose text-zinc-700 sm:text-lg ">
+        Clair allows you to have conversation with any PDFs. Simply upload your files and start asking questions right-away.
+      </p>
+    <Button asChild>
+      <Link href="/dashboard" className="text-black hover:text-zinc-700" target="_blank">
+      Get Started <ArrowRight className="ml-2 h-5 w-5"/>
+      </Link>
+      </Button>
     </MaxWidthWrapper>
   )
 }
