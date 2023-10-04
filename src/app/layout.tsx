@@ -2,6 +2,7 @@ import { cn } from '@/libs/utils'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Navbar from '@/components/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,11 +17,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className='light'>
+  <html lang="en" className='light'>
       <body className={cn(
         "min-h-screen font-sans antialiased grainy",
         inter.className,
-      )}>{children}</body>
+      )}><Navbar/>
+        {children}</body>
     </html>
   )
 }
