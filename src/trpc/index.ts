@@ -8,6 +8,8 @@ export const appRouter = router({
 
     if (!user.id || !user.email) throw new TRPCError({ code: "UNAUTHORIZED" });
     
+    const dbUser
+
     return {success: true};
   }),
 });
